@@ -18,8 +18,6 @@ function submitHandler(){
     var qty = Number(stocksQuantity.value);
     var curr = Number(currentPrice.value);
 
-   
-
     calculateProfitAndLoss(ip, qty, curr);
  
 }
@@ -54,6 +52,6 @@ function showOutput(msg) {
     //     default:
     //         break;
     // }
-    outputBox.innerHTML = msg;
+    outputBox.innerText = msg;
 
 }
