@@ -27,15 +27,22 @@ function calculateProfitAndLoss(initial, quantity, current) {
     if(initial > current){
         var loss = ((initial - current)*quantity).toFixed(2);
         var lossPercentage = ((loss / initial) * 100).toFixed(2);
-       showOutput(`Hey the loss is ${loss} and percent is ${lossPercentage}%`);
-        // loss logic here
+       showOutput(`Hey the loss is ${loss} and percent is ${lossPercentage}% 😔`);
+       if(initial > current){
+        outputBox.style.color = "red";
+    }
+       // loss logic here
     } else if(current > initial){
         var profit = ((current - initial) * quantity).toFixed(2);
         var profitPercentage = ((profit / initial) * 100).toFixed(2);
-        showOutput(`Hey the profit is ${profit} and percent is ${profitPercentage}%`);
+        showOutput(`Hey the profit is ${profit} and percent is ${profitPercentage}% 😀`);
+        if (current > initial) {
+            outputBox.style.color = "green";
+        }
         // profit logic here
     } else {
-        showOutput(`No Pain No Gain and No Gain No Pain`);// the rest of logic
+        outputBox.style.color = "white";
+        showOutput(`No Pain No Gain and No Gain No Pain 😐`);// the rest of logic
     }
 }
 
@@ -53,5 +60,6 @@ function showOutput(msg) {
     //         break;
     // }
     outputBox.innerText = msg;
+     
 
 }
