@@ -66,6 +66,16 @@ button{
     background-color: rgb(31, 154, 237);
     color: white;
     padding: 0.5rem 4rem;
+    transition: all 0.3s linear;
+    
+}
+
+button:hover{
+    color: rgb(31, 154, 237);
+    background-color: white;
+    font-weight: bold;
+    border-radius: .5rem;
+    border-color: rgb(31, 154, 237);
 }
 
 @media screen and (max-width: 650px) {
