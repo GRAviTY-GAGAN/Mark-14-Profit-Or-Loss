@@ -82,6 +82,7 @@ button:hover{
     
    .container{
        display: inline-block;
+       height: 100%;
    }
 
    body{
