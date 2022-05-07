@@ -6,20 +6,23 @@ var submitBtn = document.querySelector('#submit-btn');
 var outputBox = document.querySelector('#output-box');
 
 
-// if(initialPrice || stocksQuantity || currentPrice == '') {
-//     outputBox.innerText = 'Please fill out all fields';
-// } else {
+
 
 //Ex-06
 submitBtn.addEventListener('click', submitHandler);
 
 function submitHandler(){
-    var ip = Number(initialPrice.value);
-    var qty = Number(stocksQuantity.value);
-    var curr = Number(currentPrice.value);
-
-    calculateProfitAndLoss(ip, qty, curr);
- 
+    if(initialPrice.value && stocksQuantity.value && currentPrice.value !== '') { 
+        var ip = Number(initialPrice.value);
+        var qty = Number(stocksQuantity.value);
+        var curr = Number(currentPrice.value);
+    
+    
+        calculateProfitAndLoss(ip, qty, curr); 
+    } else {
+            outputBox.innerText = 'Please fill out all fields';
+    
+    }
 }
 
 //Ex-05
